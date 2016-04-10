@@ -1,14 +1,23 @@
-class Stack
+class Stack #working
+  attr_reader :store
+  #LIFO
   def initialize
     @store = Array.new
   end
-  
-  def pop
+
+  def fire
+    @store.shift
   end
-  
-  def push(element)
+
+  def hire(element)
+    @store.unshift(element)
   end
-  
+
   def size
+    @store.length
+  end
+
+  def empty?
+    size == 0
   end
 end
